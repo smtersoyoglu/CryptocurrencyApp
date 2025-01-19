@@ -1,4 +1,4 @@
-package com.smtersoyoglu.cryptocurrencyapp.ui.theme
+package com.smtersoyoglu.cryptocurrencyapp.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
