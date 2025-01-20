@@ -64,6 +64,9 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    //navigation
+    implementation(libs.androidx.navigation.compose)
+
     implementation(libs.androidx.hilt.navigation.compose)
 
     // Coroutines
