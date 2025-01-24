@@ -85,4 +85,10 @@ dependencies {
     implementation (libs.okhttp.v500alpha2)
     implementation (libs.logging.interceptor)
 
+    implementation(libs.androidx.lifecycle.process)
+    implementation(libs.androidx.hilt.common)
+
+    implementation (libs.androidx.paging.runtime)
+    implementation (libs.androidx.paging.compose)
+
 }
