@@ -34,7 +34,8 @@ fun CoinListScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         when {
-            uiState.isLoading -> {
+            // CircularProgressIndicator 'isLoading' ve coins'in yüklenme durumlarına bağlı
+            uiState.isLoading || coins?.loadState?.refresh is LoadState.Loading -> {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
             }
             uiState.error.isNotEmpty() -> {
@@ -96,11 +97,11 @@ fun CoinListScreen(
                         }
                     }
                 }
-
                 // Daha fazla veri yükleniyor durumu
                 if (coins.loadState.append is LoadState.Loading) {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.BottomCenter))
                 }
+
             }
             else -> {
                 Text(
@@ -112,6 +113,7 @@ fun CoinListScreen(
         }
     }
 }
+
 
 
 

@@ -2,7 +2,6 @@ package com.smtersoyoglu.cryptocurrencyapp.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 
-//Object that we get from the api.
 data class CoinDto(
     val id: String,//Used
     @SerializedName("is_active") val isActive: Boolean,//Used
