@@ -69,6 +69,9 @@ dependencies {
 
     implementation(libs.androidx.hilt.navigation.compose)
 
+    //flowlayout
+    implementation (libs.google.accompanist.flowlayout)
+
     // Coroutines
     implementation (libs.kotlinx.coroutines.core)
     implementation (libs.kotlinx.coroutines.android)

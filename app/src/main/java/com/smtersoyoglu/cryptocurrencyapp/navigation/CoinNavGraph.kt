@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.smtersoyoglu.cryptocurrencyapp.presentation.coin_detail.CoinDetailScreen
 import com.smtersoyoglu.cryptocurrencyapp.presentation.coin_list.CoinListScreen
 import com.smtersoyoglu.cryptocurrencyapp.presentation.theme.BackgroundColor
 
@@ -25,10 +26,9 @@ fun CoinNavGraph(modifier: Modifier = Modifier) {
             CoinListScreen(navController = navController)
         }
 
-
-
-
-
+        composable<Screens.CoinDetailScreen> {
+            CoinDetailScreen()
+        }
 
     }
 }
