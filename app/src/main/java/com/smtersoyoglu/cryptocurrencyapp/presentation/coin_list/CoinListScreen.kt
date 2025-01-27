@@ -34,8 +34,8 @@ fun CoinListScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         when {
-            // CircularProgressIndicator 'isLoading' ve coins'in yüklenme durumlarına bağlı
-            uiState.isLoading || coins?.loadState?.refresh is LoadState.Loading -> {
+            // CircularProgressIndicator coins'in yüklenme durumlarına bağlı
+            coins?.loadState?.refresh is LoadState.Loading -> {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
             }
             uiState.error.isNotEmpty() -> {
@@ -66,7 +66,6 @@ fun CoinListScreen(
                         }
                     }
 
-                    // Hata durumu
                     if (coins.loadState.refresh is LoadState.Error) {
                         val error = (coins.loadState.refresh as LoadState.Error).error
                         item {
@@ -81,7 +80,6 @@ fun CoinListScreen(
                         }
                     }
 
-                    // Sayfa ekleme sırasında hata
                     if (coins.loadState.append is LoadState.Error) {
                         val error = (coins.loadState.append as LoadState.Error).error
                         item {
